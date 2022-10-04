@@ -3,7 +3,7 @@ import QtTest 1.2
 
 //import ui 1.0 as UI
 //import MyComponents 1.0
-import "file:/C:/Users/Matth/CLionProjects/UnitTests/cmake-build-debug/UnitTests/ui/pages/"
+import "file:/C:/Users/Matth/CLionProjects/UnitTests/ui/pages/"
 
 Item {
     id: testItem
