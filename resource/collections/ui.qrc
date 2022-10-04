@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="ui/windows/">
+        <file alias="main.qml">../../ui/windows/main.qml</file>
+    </qresource>
+    <qresource prefix="ui/pages/">
+        <file alias="HelloWorld.qml">../../ui/pages/HelloWorld.qml</file>
+    </qresource>
+</RCC>

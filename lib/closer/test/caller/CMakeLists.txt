@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.23)
+
+project(caller_tests VERSION 1.0.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include(${CMAKE_SOURCE_DIR}/util/utilities.cmake)
+include(CTest)
+
+GET_FILES(${PROJECT_NAME}_SOURCES ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
+GET_FILES(${PROJECT_NAME}_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/../../include/test *.h)
+list(APPEND ${PROJECT_NAME}_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/../../include)
+
+ADD_QT_MODULES(${PROJECT_NAME} Core Test Quick)
+CONFIGURE_QT(${PROJECT_NAME})
+
+qt_add_executable(${PROJECT_NAME})
+target_sources(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_SOURCES})
+target_include_directories(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_LIBS} closer)
+
+add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})
