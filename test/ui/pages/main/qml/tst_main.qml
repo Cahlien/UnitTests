@@ -1,9 +1,8 @@
 import QtQuick 2.15
 import QtTest 1.2
 
-//import ui 1.0 as UI
-//import MyComponents 1.0
-import "file:/C:/Users/Matth/CLionProjects/UnitTests/ui/pages/"
+//import "file:/C:/Users/Matth/CLionProjects/UnitTests/ui/pages/"
+import dev.crowell.UI
 
 Item {
     id: testItem
@@ -16,10 +15,10 @@ Item {
 
     Component {
         id: testComponent
-    HelloWorld {
-        id: helloWorld
-        mainText: "Hello World!"
-    }
+        HelloWorld {
+            id: helloWorld
+            mainText: "Hello World!"
+        }
     }
 
 

@@ -19,7 +19,7 @@ CONFIGURE_QT(${PROJECT_NAME})
 qt_add_executable(${PROJECT_NAME})
 target_sources(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_LIBS})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_LIBS} UIplugin)
 target_compile_definitions(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_DEFINITIONS})
 
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})

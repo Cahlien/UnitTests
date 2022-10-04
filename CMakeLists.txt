@@ -50,12 +50,7 @@ list(APPEND ${PROJECT_NAME}_SOURCES ${Q_OBJECT_HEADERS})
 
 qt_add_executable(${PROJECT_NAME})
 
-qt_add_qml_module(${PROJECT_NAME}
-        URI dev.crowell.${PROJECT_NAME}
-        VERSION 0.1.0
-        QML_FILES ${QML_FILES}
-        RESOURCES ${RESOURCE_FILES}
-        )
+add_subdirectory(ui)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
         AUTOMOC TRUE
