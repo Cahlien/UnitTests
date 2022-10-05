@@ -11,6 +11,10 @@ Item {
 
     signal close()
 
+    onClose: {
+        closer != null ? closer.close() : alert("No closer set")
+    }
+
     Rectangle {
         id: mainWindowBackground
         color: '#000000'

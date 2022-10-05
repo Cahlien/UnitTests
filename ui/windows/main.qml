@@ -14,13 +14,6 @@ Window {
     visible: true
     title:qsTr('UnitTests')
 
-    Connections {
-        target: helloWorld
-        function onClose() {
-            closer.close()
-        }
-    }
-
     HelloWorld {
         id: helloWorld
         anchors.fill: parent
