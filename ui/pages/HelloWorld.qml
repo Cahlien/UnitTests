@@ -7,6 +7,9 @@ Item {
     property alias mainText: mainWindowText.text
     property var greeter: null
     property var closer: null
+    property alias mainButton: closeButton
+
+    signal close()
 
     Rectangle {
         id: mainWindowBackground
@@ -40,6 +43,6 @@ Item {
         }
 
         text: qsTr('Close')
-        onClicked: closer.close()
+        onClicked: root.close()
     }
 }
