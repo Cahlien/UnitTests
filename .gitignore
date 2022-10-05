@@ -89,6 +89,7 @@ dkms.conf
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/
 
 # Generated files
 .idea/**/contentModel.xml
@@ -211,4 +212,5 @@ CTestTestfile.cmake
 _deps
 cmake-build-*
 
-.idea/
+### QMLdoc template
+docs/
