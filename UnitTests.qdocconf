@@ -1,0 +1,18 @@
+project = UnitTests
+description = UnitTests Reference Documentation
+version = 6.4.0
+
+examplesinstallpath = UnitTests
+
+qhp.projects = UnitTests
+
+qhp.UnitTests.file = UnitTests.qhp
+qhp.UnitTests.namespace = UnitTests
+qhp.UnitTests.virtualFolder = UnitTests
+qhp.UnitTests.indexTitle = UnitTests
+qhp.UnitTests.indexRoot =
+
+headerdirs +=
+sourcedirs += ui/pages
+exampledirs += examples
+outputdir += docs

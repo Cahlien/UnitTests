@@ -1,6 +1,22 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 
+/*!
+\qmltype HelloWorld
+\inqmlmodule dev.crowell.UI
+\inherits Item
+\brief Displays a simple rectangle containing the text "Hello World"
+
+The HelloWorld type displays rectangle containing the text "Hello World" with a button to close.
+
+The text can be changed.  For example:
+
+\qml
+    HelloWorld {
+        mainText: "Hello Universe!"
+    }
+\endqml
+*/
 Item {
     id: root
 
