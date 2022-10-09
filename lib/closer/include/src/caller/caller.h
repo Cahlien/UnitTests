@@ -20,6 +20,13 @@
 #include<QGuiApplication>
 #include<QObject>
 
+/*!
+ * \qmltype Caller
+ * \instantiates Caller
+ * \brief The Caller class is a class that is used to call the close() method of the QGuiApplication class.
+ *
+ * The Caller class is a class that is used to call the close() method of the QGuiApplication class.
+ */
 class CLOSER_API Caller : public QObject
 {
 Q_OBJECT
