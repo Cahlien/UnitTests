@@ -21,6 +21,7 @@ ADD_QT_MODULES(${PROJECT_NAME} Core Quick)
 CONFIGURE_QT(${PROJECT_NAME})
 
 qt_add_library(${PROJECT_NAME} SHARED)
+
 target_sources(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_LIBS})

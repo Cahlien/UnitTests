@@ -16,5 +16,5 @@ qt_add_qml_module(${PROJECT_NAME}
         URI "dev.crowell.${PROJECT_NAME}"
         VERSION 0.1.0
         QML_FILES ${${PROJECT_NAME}_QML_FILES} pages/HelloWorld.qml
-        OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/dev/crowell/UI
+        OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/dev/crowell/UI
         )
