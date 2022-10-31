@@ -12,7 +12,9 @@ qhp.UnitTests.virtualFolder = UnitTests
 qhp.UnitTests.indexTitle = UnitTests
 qhp.UnitTests.indexRoot =
 
-headerdirs +=
+headerdirs += include
+headerdirs += lib/closer/include/src
 sourcedirs += ui/pages
+sourcedirs += lib/closer/include/src/caller
 exampledirs += examples
 outputdir += docs

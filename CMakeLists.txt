@@ -51,18 +51,26 @@ qt_add_executable(${PROJECT_NAME})
 
 add_subdirectory(ui)
 
-set_target_properties(${PROJECT_NAME} PROPERTIES
-        AUTOMOC TRUE
-
-        if(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
+    set_target_properties(${PROJECT_NAME} PROPERTIES
+        AUTOMOC ON
+        AUTORCC ON
+        AUTOUIC ON
         WIN32_EXECUTABLE TRUE
-        else()
+        ANDROID TRUE
+        )
+else()
+    set_target_properties(${PROJECT_NAME} PROPERTIES
+        AUTOMOC ON
+        AUTORCC ON
+        AUTOUIC ON
+        ANDROID TRUE
         MACOSX_BUNDLE_GUI_IDENTIFIER ${PROJECT_NAME}.crowell.dev
         MACOSX_BUNDLE_VERSION ${PROJECT_VERSION}
         MACOSX_BUNDLESHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
         MACOSX_BUNDLE TRUE
-        endif()
         )
+endif()
 
 target_sources(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_SOURCES})
 message(STATUS "SOURCES ${${PROJECT_NAME}_SOURCES}")
