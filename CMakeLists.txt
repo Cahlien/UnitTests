@@ -73,7 +73,7 @@ else()
 endif()
 
 target_sources(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_SOURCES})
-message(STATUS "SOURCES ${${PROJECT_NAME}_SOURCES}")
+
 target_include_directories(${PROJECT_NAME}
         PRIVATE
         ${${PROJECT_NAME}_INCLUDE_DIRS}
