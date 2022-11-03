@@ -11,8 +11,8 @@ int main(int argc, char *argv[])
     std::cout << temp.doSomething();
     QGuiApplication app(argc, argv);
 
-    qmlRegisterType<Generator>("dev.crowell.test.greeter", 0, 1, "Greeter");
-    qmlRegisterType<Caller>("dev.crowell.test.closer", 0, 1, "Closer");
+    qmlRegisterType<Generator>("dev.crowell.greeter", 0, 1, "Greeter");
+    qmlRegisterType<Caller>("dev.crowell.closer", 0, 1, "Closer");
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();

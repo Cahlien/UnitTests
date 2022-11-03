@@ -27,12 +27,6 @@ if($ENV{DEPENDENCY_MANAGEMENT} STREQUAL "Conan")
     conan_basic_setup(TARGETS)
 endif()
 
-set(QML_FILES
-        ui/pages/HelloWorld.qml
-        ui/windows/main.qml
-        )
-list(APPEND ${PROJECT_NAME}_SOURCES ${QML_FILES})
-
 set(RESOURCE_FILES
         resource/collections/ui.qrc
         )

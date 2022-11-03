@@ -8,6 +8,4 @@
 #include <QQmlExtensionPlugin>
 #include <QtQuickTest>
 
-Q_IMPORT_QML_PLUGIN(dev_crowell_UIPlugin)
-
 #endif //UNITTESTS_MAIN_H

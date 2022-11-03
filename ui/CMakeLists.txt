@@ -12,12 +12,18 @@ set(${PROJECT_NAME}_DIRECTORIES
         ${CMAKE_CURRENT_SOURCE_DIR}/pages
         ${CMAKE_CURRENT_SOURCE_DIR}/windows
         )
-GET_FILES(${PROJECT_NAME}_QML_FILES * *.qml)
+GET_FILES(${PROJECT_NAME}_QML_FILES "${${PROJECT_NAME}_DIRECTORIES}" "*.qml")
+GET_RELATIVE_PATHS(${PROJECT_NAME}_QML_FILES "${${PROJECT_NAME}_QML_FILES}")
 
-qt_add_library(${PROJECT_NAME} STATIC)
+qt_add_library(${PROJECT_NAME}plugin SHARED)
+list(APPEND UnitTests_LIBS ${PROJECT_NAME}plugin)
+set(UnitTests_LIBS "${UnitTests_LIBS}" PARENT_SCOPE)
+
 qt_add_qml_module(${PROJECT_NAME}
         URI "dev.crowell.${PROJECT_NAME}"
         VERSION 0.1.0
-        QML_FILES ${${PROJECT_NAME}_QML_FILES} pages/HelloWorld.qml
-        OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/dev/crowell/UI
+        SHARED
+        PLUGIN_TARGET ${PROJECT_NAME}plugin
+        QML_FILES ${${PROJECT_NAME}_QML_FILES}
+        OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/dev/crowell/${PROJECT_NAME}
         )

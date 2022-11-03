@@ -6,8 +6,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(CTest)
 
-#find_program(QMLTESTRUNNER_BIN NAMES qmltestrunner)
+# TODO: determine if I need to use the qmltestrunner executable or if I can do everything with the C++ test harness
 
+# Option 1: Use C++ test harness
 GET_TESTS(${CMAKE_CURRENT_SOURCE_DIR})
 
+# Option 2: Use qmltestrunner
+#find_program(QMLTESTRUNNER_BIN NAMES qmltestrunner)
 #add_test(NAME ui_tests COMMAND ${QMLTESTRUNNER_BIN} -input ${CMAKE_CURRENT_SOURCE_DIR}/ui/pages/main/tst_main.qml)
