@@ -28,7 +28,7 @@ Item {
     signal close()
 
     onClose: {
-        closer != null ? closer.close() : alert("No closer set")
+        closer != null ? closer.close() : Qt.quit();
     }
 
     Rectangle {
